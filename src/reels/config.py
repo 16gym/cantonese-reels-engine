@@ -83,6 +83,11 @@ KIE_API = "https://api.kie.ai/api/v1"
 KIE_UPSCALE_MODEL = "video/upscale"
 KIE_UPSCALE_PER_SECOND = Decimal("0.03")  # US$ at 4K, measured 2026-11-22 (97 credits for 16 s). Limit 50 MB / 60 s per clip.
 
+# ---- ElevenLabs: the user's own voice, read once to make a character's voice sample ---
+ELEVENLABS_API = "https://api.elevenlabs.io/v1"
+ELEVENLABS_MODEL = "eleven_v4"  # used for Cantonese (language_code "yue") on 2026-11; override with ELEVENLABS_MODEL in .env
+ELEVENLABS_MAX_CHARS = 150  # about 25-30 s of Cantonese: enough for a sample, a few cents of the user's plan
+
 # ---- Craft limits ---------------------------------------------------------------
 CHARS_PER_SECOND = 4.5  # natural Cantonese drama delivery; calibrate against real takes
 PAUSE_SECONDS = 0.2  # per comma, ellipsis or dash inside a line

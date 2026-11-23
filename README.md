@@ -40,8 +40,11 @@ AI 短劇通常睇落好假，原因係每個鏡頭都重新估過啲人同場�
    - Free 用唔到 CLI，Starter 冇 Seedance 2.5，所以最少要 Plus。
    - Plus 每月 1,200 credits，大約夠拍一套 60 秒嘅片（見下面「錢」）。
 4. **Kie AI 條 key**（只用嚟最後升 4K，可以唔用）：👉 https://scalifylabs.ai/kieai
-5. **想用自己把聲做角色**（可以唔用）：用手機喺靜嘅房錄 10–30 秒，或者喺 ElevenLabs 整把聲再匯出。
+5. **想用自己把聲做角色**（可以唔用）：喺 ElevenLabs 整好自己把聲（Voice Clone）。
    👉 https://scalifylabs.ai/elevenlabs
+   - 喺 ElevenLabs 開一條 API key，要剔 Text to Speech 權限，放入 `.env` 嘅 `ELEVENLABS_API_KEY=`。
+   - 同 agent 講你把聲嘅 voice id。agent 會經 API 用你把聲讀幾句對白，剪嚟做聲音樣本，之後每條片都跟住佢講。
+   - 冇 ElevenLabs 都得：用手機喺靜嘅房錄 10–30 秒，放入集數 folder，同 agent 講個檔名。
 
 > 上面幾條係推廣 link。經佢哋登記，價錢一樣，作者會收少少佣金。
 

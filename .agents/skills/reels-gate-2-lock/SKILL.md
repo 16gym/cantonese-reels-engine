@@ -40,6 +40,7 @@ For each role, with the user's choice: `pick <episode> <character> <letter>`, th
 For each location: `place <episode> <location> --view "..."` (add `--reverse-view "..."` when two people face each other there), or `adopt` a real photo as the master. Lock one view for every direction the cameras will look (see "Lock a place from every side the film looks" in `docs/craft/art.md`).
 For each prop: `prop <episode> <prop>` (with `--photo` when a real photo exists).
 For each speaking role: `voice <episode> <character> --line "<a line in their manner>"`. Only for characters who speak in the film.
+A role that should sound like the user (their own ElevenLabs voice): ask for the voice id (it is not a secret), check `ELEVENLABS_API_KEY` is in `.env` (never ask for the key in chat), tell them it reads about 150 characters from their ElevenLabs plan, then `voice-lock <episode> <character> --eleven <voice id>` first and `voice` after it, so the test clip already carries their voice. A real recording instead: `voice-lock <episode> <character> --file <path inside the episode>`.
 
 Then `collect`, and have Art look at every result and redo what is plainly wrong (twice at most per picture).
 

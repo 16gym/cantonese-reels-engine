@@ -284,9 +284,20 @@ def voice(episode: str, character: str, line: str = typer.Option(..., help="A Ca
 @app.command("voice-lock")
 def voice_lock(episode: str, character: str, audition: int = typer.Argument(0, help="The audition number the user approved"),
                file: str = typer.Option("", help="Instead of an audition: a recording of the real voice, inside the episode folder"),
+               eleven: str = typer.Option("", help="Instead of an audition: the user's ElevenLabs voice id. Reads this character's lines in that voice and locks the recording"),
                start: float = -1.0, end: float = -1.0):
     """Locks a voice: cuts the sample every later clip will carry, from an audition the user approved or from a real recording."""
     ep = Episode(episode)
+    if eleven:
+        from . import eleven as elevenlabs
+        if file:
+            raise GateError("Use --eleven or --file, not both")
+        lines = [line.text for line in plan.story(ep).lines if line.speaker == character]
+        if not lines:
+            raise GateError(f"{character} has no lines in story.json to read")
+        file = f"bible/characters/{character}/eleven.mp3"
+        elevenlabs.speak(eleven, " ".join(lines)[:config.ELEVENLABS_MAX_CHARS], ep.path(file))
+        ep.log(f"{character}: voice read by ElevenLabs voice {eleven} into {file}")
     source = ep.path(file) if file else ep.path("bible", "characters", character, f"voice-{audition}.mp4")
     if not source.is_file():
         raise GateError(f"{file or source.name} does not exist")

@@ -95,6 +95,8 @@ The map is how the engine knows who is on the left, whether a camera has crossed
 
 For each speaking role, after the face is locked: `voice <ep> <character> --line "<a line in their manner, 6 to 12 characters>"`. It makes a 5-second clip the user listens to. When they approve one: `voice-lock <ep> <character> <number>`. That sample then rides with every clip the character speaks in, to hold the voice steady.
 
+A role played by the user in their own voice: the model's invented voice will not sound like them. Lock their ElevenLabs voice instead, before the test clip: `voice-lock <ep> <character> --eleven <voice id>` reads that character's lines through the ElevenLabs API and cuts the sample from it. The model still speaks every line in the film; the sample only tells it whose voice to copy, so the user's ear is the judge.
+
 Make voice samples only for characters who speak in the clip. A voice sample for a silent character makes the model give them a voice.
 
 First run of the engine on a new account: do `voice-test <ep>` before anything else in this gate. It answers whether the model speaks natural Cantonese at all. If the user says it does not, stop: the fallback (silent video plus a separate voice) is not built and is their decision.

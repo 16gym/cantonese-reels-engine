@@ -91,7 +91,8 @@ Generation commands return at once. `collect` fetches what has finished and is s
 - `collect` reporting an `unknown` submission means it may have been charged: do not resubmit, check the Higgsfield console with the user.
 - Retakes come out of the allowance. When it runs out the tool stops; show the user what exists and ask.
 - At most two redo rounds for any one picture or clip before you show the user the best so far and ask how to go on.
-- Kie AI is used only for the 4K upscale. It is its own approval and is paid in US$ with `KIE_API_KEY` in `.env`. Everything else is Higgsfield.
+- Kie AI is used only for the 4K upscale. It is its own approval and is paid in US$ with `KIE_API_KEY` in `.env`.
+- ElevenLabs is used only to read the user's own voice once for a voice sample (`voice-lock --eleven <voice id>`, `ELEVENLABS_API_KEY` in `.env`). Everything else is Higgsfield.
 
 ## Where state lives
 
