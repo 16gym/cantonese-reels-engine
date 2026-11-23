@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cantonese-reels-engine"
+version = "0.1.0"
+description = "Lock-first engine for photoreal Cantonese short-drama reels, run by any coding agent"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.12,<3", "typer>=0.20,<1", "httpx>=0.28,<1", "pillow>=11"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+# Listens to the generated Cantonese: dialogue check and caption timing. Large download.
+speech = ["faster-whisper>=1.1"]
+
+[project.scripts]
+reels = "reels.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

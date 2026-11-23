@@ -1,0 +1,188 @@
+{
+  "clips": [
+    {
+      "id": "c01",
+      "location": "booth",
+      "duration": 6,
+      "axis": [
+        "yan",
+        "keung"
+      ],
+      "blocking": "YAN sits on the booth bench against the wall, the glass of iced lemon tea on the table in front of her. KEUNG stands in the aisle beside the table, facing her, tea towel on his left shoulder. Neither of them moves from their spot.",
+      "ambience": "Almost empty late-night cha chaan teng: fluorescent hum, a wall fan, a distant wok clatter, one TV murmuring.",
+      "shots": [
+        {
+          "id": "s01",
+          "start": 0,
+          "end": 2,
+          "setup": "yan-mcu",
+          "size": "MCU",
+          "camera": {
+            "at": "cam_yan",
+            "look_at": "yan",
+            "height": "eye",
+            "move": "handheld, almost still",
+            "view": "The camera stands in the aisle beside the booth table and looks at YAN on the bench against the wall: head and shoulders, the tiled wall behind her, the glass on the table at the bottom of the frame. She is the only person in the picture."
+          },
+          "positions": {
+            "yan": "seat"
+          },
+          "props": [
+            "tea"
+          ],
+          "action": "YAN lowers the glass from her lips onto the table and looks up to her right at someone standing over her.",
+          "performance": "Tired, mouth tight, holding back irritation.",
+          "lines": [
+            "L01"
+          ],
+          "zh": "阿欣放低杯嘢，抬頭望住企喺旁邊嘅人，忍住把火。"
+        },
+        {
+          "id": "s02",
+          "start": 2,
+          "end": 5,
+          "setup": "keung-ots",
+          "size": "MCU",
+          "camera": {
+            "at": "cam_keung",
+            "look_at": "keung",
+            "height": "eye",
+            "move": "handheld, almost still",
+            "view": "The camera is on the bench behind YAN's shoulder and looks up at KEUNG standing in the aisle. YAN's head and shoulder are dark and out of focus at one edge of the frame; KEUNG is head and shoulders beyond her, the aisle and far wall behind him."
+          },
+          "positions": {
+            "keung": "aisle",
+            "yan": "seat"
+          },
+          "action": "Over YAN's shoulder, soft in the foreground: KEUNG answers at once, flicking four fingers up, then drops his hand.",
+          "performance": "Completely sure of himself, chin up, a little impatient.",
+          "lines": [
+            "L02"
+          ],
+          "zh": "過阿欣膊頭拍強哥：佢即刻答，舉起四隻手指，好有信心。"
+        },
+        {
+          "id": "s03",
+          "start": 5,
+          "end": 6,
+          "setup": "yan-cu",
+          "size": "CU",
+          "camera": {
+            "at": "cam_yan",
+            "look_at": "yan",
+            "height": "eye",
+            "move": "locked off",
+            "view": "The camera stands in the aisle beside the booth table, close on YAN's face: her face fills the frame, the tiled wall soft behind her. She is the only person in the picture."
+          },
+          "positions": {
+            "yan": "seat"
+          },
+          "action": "YAN stares up at him without blinking, then her eyes drop to the glass.",
+          "performance": "Blank disbelief, too tired to argue.",
+          "zh": "阿欣望住佢，呆咗，之後望返落杯嘢。"
+        }
+      ],
+      "zh": "阿欣坐喺卡位靠牆嗰邊，杯凍檸茶喺佢面前。強哥企喺走廊、枱邊，面向佢。兩個都唔郁位。"
+    },
+    {
+      "id": "c02",
+      "location": "bar",
+      "duration": 4,
+      "blocking": "KEUNG stands alone at the steel drinks counter, facing it, a fresh glass of tea in front of him and the sugar tin at his right hand.",
+      "ambience": "Extractor fan, the clink of a metal spoon on glass, tea urn hissing.",
+      "shots": [
+        {
+          "id": "s04",
+          "start": 0,
+          "end": 4,
+          "setup": "bar-ms",
+          "size": "MS",
+          "camera": {
+            "at": "cam_bar",
+            "look_at": "keung",
+            "height": "eye",
+            "move": "handheld, slow push in",
+            "view": "The camera faces the steel drinks counter square on from the customer side. KEUNG stands behind the glass he is making, waist up, the tea urn and white wall tiles behind him. He is the only person in the picture."
+          },
+          "positions": {
+            "keung": "station"
+          },
+          "props": [
+            "tea"
+          ],
+          "action": "KEUNG spoons sugar into the fresh glass three times, counting each spoon with a small nod, then stirs once.",
+          "performance": "Solemn concentration, like a pharmacist.",
+          "lines": [
+            "L03"
+          ],
+          "zh": "強哥落三羹糖，每羹點一下頭，攪一下，好認真。"
+        }
+      ],
+      "zh": "強哥自己一個企喺水吧前面，面前一杯新嘅茶，右手邊係糖罐。"
+    },
+    {
+      "id": "c03",
+      "location": "booth",
+      "duration": 5,
+      "axis": [
+        "yan",
+        "keung"
+      ],
+      "blocking": "Same booth, same spots as before: YAN on the bench against the wall, KEUNG standing in the aisle beside the table. The new glass of iced lemon tea is on the table in front of her.",
+      "ambience": "Same late-night cha chaan teng: fluorescent hum, wall fan, distant TV.",
+      "shots": [
+        {
+          "id": "s05",
+          "start": 0,
+          "end": 3,
+          "setup": "yan-mcu",
+          "size": "MCU",
+          "camera": {
+            "at": "cam_yan",
+            "look_at": "yan",
+            "height": "eye",
+            "move": "handheld, almost still",
+            "view": "The camera stands in the aisle beside the booth table and looks at YAN on the bench against the wall: head and shoulders, the tiled wall behind her, the glass on the table at the bottom of the frame. She is the only person in the picture."
+          },
+          "positions": {
+            "yan": "seat"
+          },
+          "props": [
+            "tea"
+          ],
+          "action": "YAN takes one sip through the straw, puts the glass down, pauses, then looks up to her right.",
+          "performance": "A small wince she fails to hide, then resignation.",
+          "lines": [
+            "L04"
+          ],
+          "zh": "阿欣用飲管飲一啖，放低杯，停一停，再抬頭。"
+        },
+        {
+          "id": "s06",
+          "start": 3,
+          "end": 5,
+          "setup": "keung-ots",
+          "size": "MCU",
+          "camera": {
+            "at": "cam_keung",
+            "look_at": "keung",
+            "height": "eye",
+            "move": "handheld, almost still",
+            "view": "The camera is on the bench behind YAN's shoulder and looks up at KEUNG standing in the aisle. YAN's head and shoulder are dark and out of focus at one edge of the frame; KEUNG is head and shoulders beyond her, the aisle and far wall behind him."
+          },
+          "positions": {
+            "keung": "aisle",
+            "yan": "seat"
+          },
+          "action": "Over YAN's shoulder: KEUNG fires back immediately, already half turning to walk away down the aisle.",
+          "performance": "Lecturing, as if she should have known.",
+          "lines": [
+            "L05"
+          ],
+          "zh": "過阿欣膊頭拍強哥：佢即刻駁返，已經擰轉身想走。"
+        }
+      ],
+      "zh": "返到同一個卡位，兩個人企位同之前一樣。新嗰杯凍檸茶喺阿欣面前。"
+    }
+  ]
+}

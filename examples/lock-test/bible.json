@@ -1,0 +1,121 @@
+{
+  "style": "Handheld documentary realism, like a low-budget Hong Kong indie drama shot at night with one small cinema camera. 35mm-equivalent lens for mediums, 50mm for close shots, shallow but not creamy depth of field. Mixed practical light: green-white fluorescent tubes overhead, warm spill from the kitchen. Slight sensor grain, natural contrast, no teal-and-orange grade.",
+  "characters": [
+    {
+      "id": "yan",
+      "name": "阿欣",
+      "look": "Hong Kong Chinese woman, 28. Oval face, tired eyes with faint dark circles, straight black shoulder-length hair tucked behind one ear, thin build, no visible make-up beyond smudged eyeliner.",
+      "wardrobe": "Pale blue long-sleeved office blouse with the top button open and sleeves pushed to the elbow, charcoal knee-length skirt, staff lanyard with a blank white card, small black shoulder bag on the seat beside her.",
+      "voice": "Woman in her late twenties, mid-low pitch, quiet and flat from tiredness, clean Hong Kong Cantonese, slightly drawn-out sentence endings.",
+      "real_person": null,
+      "refs": {},
+      "zh": "28 歲 OL，黑色及膊直髮，一邊撥去耳後，眼有少少黑眼圈。淺藍色長袖恤衫，袖捲到手踭，深灰及膝裙，掛住白色員工證。把聲偏低、冇力、尾音拖少少。"
+    },
+    {
+      "id": "keung",
+      "name": "強哥",
+      "look": "Hong Kong Chinese man, 55. Square face, deep nasolabial lines, short grey-flecked crew cut, thick eyebrows, weathered tanned skin, stocky with a slight belly.",
+      "wardrobe": "White short-sleeved cotton waiter shirt, slightly yellowed at the collar, a pen clipped in the chest pocket, black trousers, a white tea towel over the left shoulder.",
+      "voice": "Man in his mid fifties, rough mid pitch, fast and loud, old-school Hong Kong Cantonese with clipped endings, never hesitant.",
+      "real_person": null,
+      "refs": {},
+      "zh": "55 歲茶餐廳伙記，國字面，平頭有白髮，皮膚黑實，有少少肚腩。白色短袖伙記恤衫，領口有啲黃，袋口插住支筆，黑色西褲，左膊搭住條白毛巾。把聲粗、講嘢快同大聲。"
+    }
+  ],
+  "locations": [
+    {
+      "id": "booth",
+      "name": "茶餐廳卡位",
+      "look": "A four-seat booth in an old Hong Kong cha chaan teng: dark green vinyl bench seats with a cracked corner, a worn laminate table with a glass top over paper menus, pale green wall tiles to shoulder height, cream paint above stained by years of steam, a wall fan, a plastic menu holder, a napkin dispenser and a bottle of soy sauce on the table.",
+      "time": "Night, about 1am, almost empty",
+      "light": "Cold fluorescent tubes on the ceiling, a warmer glow from the kitchen at the far end, a little neon colour from the street through the front glass.",
+      "real_refs": [],
+      "refs": {},
+      "map": {
+        "aspect": 1.4,
+        "fixtures": [
+          {
+            "name": "卡位枱",
+            "x": 0.25,
+            "y": 0.42,
+            "w": 0.22,
+            "h": 0.16
+          },
+          {
+            "name": "牆",
+            "x": 0.0,
+            "y": 0.0,
+            "w": 1.0,
+            "h": 0.06
+          },
+          {
+            "name": "走廊",
+            "x": 0.55,
+            "y": 0.1,
+            "w": 0.2,
+            "h": 0.85
+          }
+        ],
+        "marks": {
+          "seat": [
+            0.3,
+            0.5
+          ],
+          "aisle": [
+            0.62,
+            0.5
+          ],
+          "cam_yan": [
+            0.7,
+            0.78
+          ],
+          "cam_keung": [
+            0.24,
+            0.8
+          ]
+        }
+      },
+      "zh": "舊式茶餐廳四人卡位：墨綠色膠梳化有一角爆咗，玻璃枱面壓住餐牌，淺綠色牆磚去到膊頭高，上面米色牆身俾蒸氣燻到黃。凌晨一點，天花光管白光，遠處廚房有暖光。"
+    },
+    {
+      "id": "bar",
+      "name": "茶餐廳水吧",
+      "look": "The drinks station of the same cha chaan teng: a stainless-steel counter crowded with a tea urn, tins of evaporated milk, a tub of cut lemons, a metal sugar tin with a long spoon, stacked glasses, a hand-written order spike. Scuffed white wall tiles behind, a small extractor fan.",
+      "time": "Night, about 1am",
+      "light": "One bare fluorescent tube directly above the counter, steam catching the light.",
+      "real_refs": [],
+      "refs": {},
+      "map": {
+        "aspect": 1.2,
+        "fixtures": [
+          {
+            "name": "水吧枱",
+            "x": 0.15,
+            "y": 0.2,
+            "w": 0.7,
+            "h": 0.18
+          }
+        ],
+        "marks": {
+          "station": [
+            0.5,
+            0.45
+          ],
+          "cam_bar": [
+            0.5,
+            0.88
+          ]
+        }
+      },
+      "zh": "同一間茶餐廳嘅水吧：不銹鋼枱面擺滿茶桶、花奶罐、檸檬片、鐵糖罐同長羹、疊起嘅玻璃杯。後面白色牆磚。頭頂一支光管，有蒸氣。"
+    }
+  ],
+  "props": [
+    {
+      "id": "tea",
+      "name": "凍檸茶",
+      "look": "A tall clear ribbed glass tumbler, three lemon slices pressed against the inside, dark amber tea, large ice cubes, a white straw, condensation on the outside. About the height of a hand.",
+      "zh": "高身坑紋玻璃杯，三片檸檬貼住杯邊，深啡色茶，大粒冰，白色飲管，杯外有水珠。大約一隻手掌高。"
+    }
+  ]
+}

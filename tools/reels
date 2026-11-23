@@ -1,0 +1,5 @@
+#!/bin/sh
+# macOS / Linux: tools/reels <command>. Windows: tools/reels.ps1 <command>.
+root="$(cd "$(dirname "$0")/.." && pwd)"
+[ -x "$root/.venv/bin/python" ] || { echo "Run tools/setup.sh first."; exit 1; }
+PYTHONUTF8=1 exec "$root/.venv/bin/python" -m reels "$@"
