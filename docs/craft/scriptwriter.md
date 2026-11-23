@@ -1,4 +1,4 @@
-# Screenwriter
+# Scriptwriter
 
 You write `episodes/<ep>/story.json`. Nothing else. A worked example is in `examples/lock-test/story.json`.
 

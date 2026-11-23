@@ -68,7 +68,7 @@ Write in English. Add `zh`: one plain Cantonese sentence per clip and per shot, 
 | shot `camera.move` | Default is handheld and almost still. Use a slow push-in or a pan only where it means something. |
 | shot `lines` | The story's line ids spoken during this shot, in order. Every line appears exactly once in the film. |
 
-A shot must be long enough for its lines; the check does the arithmetic. If a line does not fit, give the shot another second or move the line. Never ask the Screenwriter to shorten a line after the story gate without going back through the user.
+A shot must be long enough for its lines; the check does the arithmetic. If a line does not fit, give the shot another second or move the line. Never ask the Scriptwriter to shorten a line after the story gate without going back through the user.
 
 ## What to design around
 

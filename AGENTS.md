@@ -11,7 +11,7 @@ The bar is "you cannot tell it is AI": same face, same clothes, same room every 
 ## The one idea: lock first, shoot later
 
 ```
-1 story   Screenwriter -> story.json            The user approves the script and the picture budget
+1 story   Scriptwriter -> story.json            The user approves the script and the picture budget
 2 lock    Art          -> bible.json + pictures The user approves every face, place, prop and voice
 3 angles  Director     -> shots.json + anchors  The user approves every camera angle and the draft budget
           drafts at 480p, QA rejects the broken ones
@@ -34,7 +34,7 @@ Do not look for a way around a refusal. It is the product working.
 | Role | Does | Writes | Reads first |
 | --- | --- | --- | --- |
 | Producer (you) | Talks to the user, runs commands, records approvals, handles money | `state.json` through `reels` only | this file, the gate skill |
-| `screenwriter` | Pitches, story, Cantonese dialogue | `story.json` | `docs/craft/screenwriter.md` |
+| `scriptwriter` | Pitches, story, Cantonese dialogue | `story.json` | `docs/craft/scriptwriter.md` |
 | `art` | Real photos, casting, wardrobe, places, props, voices | `bible.json`, `refs/` | `docs/craft/art.md` |
 | `director` | Shots, blocking, camera, anchor frames, retake corrections | `shots.json`, `retakes.json` | `docs/craft/director.md` |
 | `qa` | Compares every anchor, take and final against the locked pictures | `*.qa.json` verdicts only | `docs/craft/qa.md` |

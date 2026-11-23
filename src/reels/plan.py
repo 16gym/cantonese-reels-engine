@@ -1,6 +1,6 @@
 """The three plan files an episode is made of. Unknown fields are rejected so typos surface early.
 
-story.json  - gate 1, written by the Screenwriter
+story.json  - gate 1, written by the Scriptwriter
 bible.json  - gate 2, written by Art: the locked look of every person, place and object
 shots.json  - gate 3, written by the Director: clips (one video request each) made of shots
 """
