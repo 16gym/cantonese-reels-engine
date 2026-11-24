@@ -16,7 +16,7 @@ SHOT_CHECKS = {
     "wardrobe": "Clothes match the locked body picture: garment, colour, sleeve length, accessories.",
     "props": "Each prop matches its locked picture and stays the same object through the shot.",
     "location": "The room matches the locked master: layout, furniture, wall finish, where the light comes from.",
-    "layout": "Nothing is mirrored. Every landmark is on the side of the frame the request's geometry line gives (in a Hong Kong taxi the driver and steering wheel are on the car's right). Work it out from concrete cues, such as which arm is nearer the camera. The vehicle or room is the same model as the locked views, not a look-alike.",
+    "layout": "Nothing is mirrored. Every landmark is on the side of the frame the request's geometry line gives (for example, Hong Kong vehicles are right-hand drive: the driver and steering wheel are on the car's right). Work it out from concrete cues, such as which arm is nearer the camera. The vehicle or room is the same model as the locked views, not a look-alike.",
     "light": "Time of day and light colour match the bible. No jump from night to day.",
     "staging": "People are where the shot plan puts them, in the planned left-to-right order, at the planned shot size.",
     "anatomy": "Hands, faces, limbs and objects are physically right. Nothing melts, doubles or passes through anything.",

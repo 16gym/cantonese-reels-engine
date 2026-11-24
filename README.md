@@ -33,14 +33,13 @@ AI 短劇通常睇落好假，原因係每個鏡頭都重新估過啲人同場�
 
 ## 你要準備嘅嘢
 
-1. **一個 coding agent**：Claude Code、Codex，或者其他都得。
-2. **Python 3.12+**、**FFmpeg**（剪片工具）、**Node.js 18+**。
-3. **Higgsfield Plus 或以上**：出相同出片全部喺度做（Seedance 2.5 出片、Seedream 出相）。
+1. **一個 coding agent**：Claude Code、Codex，或者其他都得。未有就跟佢哋官網裝好先。
+2. **Higgsfield Plus 或以上**：出相同出片全部喺度做（Seedance 2.5 出片、Seedream 出相）。
    👉 https://scalifylabs.ai/higgsfield
    - Free 用唔到 CLI，Starter 冇 Seedance 2.5，所以最少要 Plus。
    - Plus 每月 1,200 credits，大約夠拍一套 60 秒嘅片（見下面「錢」）。
-4. **Kie AI 條 key**（只用嚟最後升 4K，可以唔用）：👉 https://scalifylabs.ai/kieai
-5. **想用自己把聲做角色**（可以唔用）：喺 ElevenLabs 整好自己把聲（Voice Clone）。
+3. **Kie AI 條 key**（只用嚟最後升 4K，可以唔用）：👉 https://scalifylabs.ai/kieai
+4. **想用自己把聲做角色**（可以唔用）：喺 ElevenLabs 整好自己把聲（Voice Clone）。
    👉 https://scalifylabs.ai/elevenlabs
    - 喺 ElevenLabs 開一條 API key，要剔 Text to Speech 權限，放入 `.env` 嘅 `ELEVENLABS_API_KEY=`。
    - 同 agent 講你把聲嘅 voice id。agent 會經 API 用你把聲讀幾句對白，剪嚟做聲音樣本，之後每條片都跟住佢講。
@@ -48,17 +47,75 @@ AI 短劇通常睇落好假，原因係每個鏡頭都重新估過啲人同場�
 
 > 上面幾條係推廣 link。經佢哋登記，價錢一樣，作者會收少少佣金。
 
-## 安裝
+## 安裝（第一次，大約 10 分鐘，唔使錢）
+
+### 1. 裝基本工具
+
+要有 4 樣：Git（攞 code）、Python 3.12 或以上、FFmpeg（剪片）、Node.js（裝 Higgsfield CLI）。
+
+**Windows**：開 PowerShell，逐行打：
+
+```powershell
+winget install Git.Git
+winget install Python.Python.3.12
+winget install Gyan.FFmpeg
+winget install OpenJS.NodeJS.LTS
+```
+
+裝完**閂咗 PowerShell 再開過一個**，新裝嘅嘢先搵得到。
+
+**macOS**：先裝 [Homebrew](https://brew.sh)，然後喺 Terminal 打：
 
 ```bash
-# Windows
-tools\setup.ps1
+brew install git python ffmpeg node
+```
 
-# macOS / Linux
+**Linux（Ubuntu 24.04）**：
+
+```bash
+sudo apt install git python3 python3-venv ffmpeg nodejs npm
+```
+
+### 2. 攞 code
+
+用 `git clone`，唔好撳 GitHub 嘅 Download ZIP。
+Windows 會當 ZIP 入面嘅 script 係網上下載，唔俾你行。
+
+```bash
+git clone https://github.com/16gym/cantonese-reels-engine.git
+cd cantonese-reels-engine
+```
+
+### 3. 行 setup
+
+**Windows**：
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\tools\setup.ps1
+```
+
+第一行只係第一次要打。
+佢俾 PowerShell 行你部機上面嘅 script（Windows 預設係唔俾行嘅）。
+
+**macOS / Linux**：
+
+```bash
 sh tools/setup.sh
 ```
 
-裝 Higgsfield 官方 CLI，然後登入一次：
+Setup 會開一個 `.venv`（呢個 project 自己用嘅 Python）、裝套件、整好 `.env`，再自己測試一次。
+最尾見到 `Setup complete. Nothing was spent.` 就裝好。
+
+想 agent 聽得出生成條片講嘅廣東話啱唔啱（可以唔裝，檔案好大）：
+
+```bash
+.venv/bin/python -m pip install faster-whisper          # Windows: .venv\Scripts\python.exe -m pip install faster-whisper
+```
+
+冇佢都用得：字幕跟分鏡時間，廣東話靠你自己耳仔聽。
+
+### 4. 裝 Higgsfield CLI，登入一次
 
 ```bash
 npm install -g @higgsfield/cli
@@ -68,16 +125,19 @@ higgsfield auth login
 登入會彈個 browser 出嚟，你撳批准就得。
 唔使打 key，你嘅密碼 agent 都唔會見到。
 
-最後喺 `.env` 填返要用嘅嘢（安裝時已經幫你由 `.env.example` 抄咗一份）：
+### 5. 填 `.env`
+
+用 Notepad 或者任何編輯器開 repo 入面嘅 `.env`，填你要用嘅：
 
 - `KIE_API_KEY`：Kie 條 key，要升 4K 先填。
+- `ELEVENLABS_API_KEY`：用自己把聲先填。
 - `REELS_CONTACT`：一個你肯俾 Wikimedia 見到嘅網址或者 email。有咗呢行，engine 先可以自己搵真實場景相。
 
 **唔好將任何 key 貼入 chat。** Key 只可以放喺 `.env`。
 
 ## 第一次用
 
-喺你個 coding agent 開呢個 folder，然後講：
+喺 repo folder 入面開你個 coding agent（Claude Code 打 `claude`，Codex 打 `codex`），然後講：
 
 > 用 reels-start，幫我開始。
 
